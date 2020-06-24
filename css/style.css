@@ -10,9 +10,9 @@ body {
     grid-template-columns: repeat(3, 1fr);
 }
 
-h1{
+h1 {
     display: flex;
-    font-family: 'MuseoModerno', cursive;
+    font-family: "MuseoModerno", cursive;
     align-self: center;
     font-size: 4em;
     user-select: none;
@@ -125,4 +125,30 @@ h1{
     margin: 1% 5%;
     overflow-y: auto;
     max-height: 100%;
+}
+
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+        width: 75%;
+    }
+    #calculator {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 375px){
+    #container{
+        width: 85%;
+    }
+    #calculator{
+        width: 275px;
+    }
+    .operator, .extra, .number{
+        width: 35px;
+        height: 40px;
+    }
+    h1{
+        font-size: 3em;
+    }
 }
