@@ -17,11 +17,14 @@ let history = [];
 let lastOperation;
 
 function display(number) {
-    validate(number);
-    let type = number.target.className;
-    let first = number.target.innerText;
-    first == "C" ? clear() : null;
-    type == "number" || type == "operator" || type == "parenthesis" ? value.innerText = value.innerText + first : null;
+    debugger
+    if (validate(number)) { return }
+    else {
+        let type = number.target.className;
+        let first = number.target.innerText;
+        first == "C" ? clear() : null;
+        type == "number" || type == "operator" || type == "parenthesis" ? value.innerText = value.innerText + first : null;
+    }
 }
 
 function calculate() {
@@ -59,11 +62,11 @@ function back() {
 
 function validate(button) {
     let lastCharacter = value.innerText[value.innerText.length - 1];
-    if (lastCharacter == "/" || lastCharacter == "*" || lastCharacter == "+" || lastCharacter == "-" || lastCharacter == "%" || lastCharacter == ".") {
+    if (lastCharacter == "/" || lastCharacter == "*" || lastCharacter == "+" || lastCharacter == "-" || lastCharacter == ".") {
         if (button.target.className == "operator") {
-            calculator.preventDefault();
+            return true
         }
-    }
+    } 
 }
 
 function changePar() {
