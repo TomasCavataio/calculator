@@ -17,12 +17,11 @@ let history = [];
 let lastOperation;
 
 function display(number) {
-    debugger
     if (validate(number)) { return }
     else {
         let type = number.target.className;
         let first = number.target.innerText;
-        first == "C" ? clear() : null;
+        first == "C" ? clean() : null;
         type == "number" || type == "operator" || type == "parenthesis" ? value.innerText = value.innerText + first : null;
     }
 }
@@ -44,6 +43,7 @@ function clean() {
 }
 
 function clear() {
+    debugger
     log.innerText = "";
     history = [];
 }
@@ -70,7 +70,6 @@ function validate(button) {
 }
 
 function changePar() {
-    debugger
     if (toggle) {
         openPar.style.display = "none";
         closePar.style.display = "block";
