@@ -9,6 +9,9 @@ let previousOperations = document.getElementById("history");
 let clearing = document.getElementById("clearing").addEventListener("click", clear)
 
 let validation = numbers.addEventListener("click", validate);
+let openPar = document.getElementById("open");
+let closePar = document.getElementById("close");
+let toggle = true;
 
 let history = [];
 let lastOperation;
@@ -18,7 +21,7 @@ function display(number) {
     let type = number.target.className;
     let first = number.target.innerText;
     first == "C" ? clear() : null;
-    type == "number" || type == "operator" ? value.innerText = value.innerText + first : null;
+    type == "number" || type == "operator" || type == "parenthesis" ? value.innerText = value.innerText + first : null;
 }
 
 function calculate() {
@@ -32,6 +35,9 @@ function calculate() {
 
 function clean() {
     value.innerText = "";
+    toggle ? toggle = true : toggle = true;
+    openPar.style.display = "block";
+    closePar.style.display = "none";
 }
 
 function clear() {
@@ -58,4 +64,16 @@ function validate(button) {
             calculator.preventDefault();
         }
     }
+}
+
+function changePar() {
+    debugger
+    if (toggle) {
+        openPar.style.display = "none";
+        closePar.style.display = "block";
+    } else {
+        openPar.style.display = "block";
+        closePar.style.display = "none";
+    }
+    toggle = !toggle
 }
