@@ -43,7 +43,6 @@ function clean() {
 }
 
 function clear() {
-    debugger
     log.innerText = "";
     history = [];
 }
