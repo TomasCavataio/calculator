@@ -59,7 +59,7 @@ h1 {
 .operator,
 .number,
 .extra,
-.parenthesis{
+.parenthesis {
     width: 50px;
     height: 50px;
     margin: 15px;
@@ -72,6 +72,7 @@ h1 {
 
 #selectedNumber {
     padding: 5%;
+    overflow-x: hidden;
 }
 
 #historyTitle {
@@ -125,6 +126,7 @@ h1 {
 .historyBtn:active {
     background-color: crimson;
 }
+
 #historyLog {
     grid-area: log;
     margin: 1% 5%;
@@ -132,7 +134,7 @@ h1 {
     max-height: 100%;
 }
 
-#close{
+#close {
     display: none;
 }
 
@@ -146,22 +148,24 @@ h1 {
     }
     #history {
         background-color: transparent;
-        border: none
+        border: none;
     }
 }
 
-@media (max-width: 375px){
-    #container{
+@media (max-width: 375px) {
+    #container {
         width: 85%;
     }
-    #calculator{
+    #calculator {
         width: 275px;
     }
-    .operator, .extra, .number{
+    .operator,
+    .extra,
+    .number {
         width: 35px;
         height: 40px;
     }
-    h1{
+    h1 {
         font-size: 3em;
     }
 }
