@@ -1,6 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #9932cce8;
+    background-color: #a659e4a1;
 }
 #container {
     width: 80%;
@@ -65,9 +65,10 @@ h1 {
     margin: 15px;
     float: left;
     border-radius: 50%;
+    font-family: "MuseoModerno", cursive;
     border-width: 0;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 #selectedNumber {
@@ -167,5 +168,10 @@ h1 {
     }
     h1 {
         font-size: 3em;
+    }
+
+    .parenthesis {
+        max-width: 35px;
+        max-height: 40px;
     }
 }
