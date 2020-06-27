@@ -109,7 +109,7 @@ h1 {
     grid-area: button;
     align-items: center;
     display: inline-flex;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .historyBtn {
@@ -118,6 +118,7 @@ h1 {
     padding: 0 15%;
     background-color: skyblue;
     cursor: pointer;
+    border: none;
 }
 
 .historyBtn:focus {
